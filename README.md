@@ -75,8 +75,8 @@ After training the model:
 | Metric | Value |
 |------|------|
 | Training Accuracy | ~96% |
-| Validation Accuracy | ~94–100% |
-| Test Accuracy | ~93–100% |
+| Validation Accuracy | ~94% |
+| Test Accuracy | ~93% |
 
 These results indicate that the CNN model performs well in classifying lung CT scan images.
 
