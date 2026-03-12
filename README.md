@@ -7,7 +7,7 @@ CNN is used for this project.
 CT scan images are classified into four categories:
 
 - adenocarcinoma
-- large_cell
+- large cell
 - normal
 - squamous
 
