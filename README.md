@@ -1,17 +1,18 @@
 # Lung Cancer Detection using CNN
 
-A deep learning project that detects lung cancer types from CT scan images using a **Convolutional Neural Network (CNN)**.  
-The model is trained using TensorFlow/Keras and deployed through a **Streamlit web application** for easy interaction.
+**Name:** Raghav Joshi  
+**Registered Email:** raghavjoshi200314@gmail.com  
+**Course & Batch:** PBEL 2.2 Artificial Intelligence – Batch 8  
 
 ---
 
 ## Project Overview
 
-Lung cancer is one of the leading causes of cancer-related deaths worldwide. Early detection plays a crucial role in improving patient survival rates.  
+Lung cancer is one of the leading causes of cancer-related deaths worldwide. Early detection plays a crucial role in improving patient survival rates.
 
-This project builds a **CNN-based image classification model** that analyzes CT scan images and predicts the type of lung cancer.
+This project builds a **Convolutional Neural Network (CNN)** that analyzes **CT scan images** and predicts the type of lung cancer.
 
-The application allows users to **upload a CT scan image** and receive a predicted cancer type along with a confidence score.
+The model is trained using **TensorFlow/Keras** and integrated with a **Streamlit web application** that allows users to upload CT scan images and receive predictions.
 
 ---
 
@@ -30,27 +31,29 @@ The dataset is divided into:
 - **Validation Set**
 - **Test Set**
 
-Dataset structure:
+### Dataset Structure
 
-
+```
 data/
 └── Lung Cancer Detection Dataset
-├── train
-│ ├── adenocarcinoma
-│ ├── large_cell
-│ ├── normal
-│ └── squamous
-├── valid
-│ ├── adenocarcinoma
-│ ├── large_cell
-│ ├── normal
-│ └── squamous
-└── test
-├── adenocarcinoma
-├── large_cell
-├── normal
-└── squamous
-
+    ├── train
+    │   ├── adenocarcinoma
+    │   ├── large_cell
+    │   ├── normal
+    │   └── squamous
+    │
+    ├── valid
+    │   ├── adenocarcinoma
+    │   ├── large_cell
+    │   ├── normal
+    │   └── squamous
+    │
+    └── test
+        ├── adenocarcinoma
+        ├── large_cell
+        ├── normal
+        └── squamous
+```
 
 ⚠️ The dataset is **not included in this repository** due to size limitations.
 
@@ -58,19 +61,19 @@ data/
 
 ## Model Architecture
 
-The Convolutional Neural Network consists of:
+The Convolutional Neural Network consists of the following layers:
 
-- Convolution Layers – extract image features
-- MaxPooling Layers – reduce spatial dimensions
-- Flatten Layer – convert feature maps into a 1D vector
-- Dense Layers – perform classification
-- Softmax Output Layer – outputs probabilities for the four classes
+- **Convolution Layers** – Extract spatial features from CT scan images  
+- **MaxPooling Layers** – Reduce spatial dimensions and retain important features  
+- **Flatten Layer** – Converts feature maps into a 1D vector  
+- **Dense Layers** – Perform classification based on extracted features  
+- **Softmax Output Layer** – Produces probability scores for the four classes  
 
 ---
 
 ## Model Performance
 
-After training the model:
+After training the CNN model:
 
 | Metric | Value |
 |------|------|
@@ -78,22 +81,22 @@ After training the model:
 | Validation Accuracy | ~94% |
 | Test Accuracy | ~93% |
 
-These results indicate that the CNN model performs well in classifying lung CT scan images.
+These results show that the model performs well in classifying lung CT scan images.
 
 ---
 
 ## Streamlit Web Application
 
-A **Streamlit frontend interface** was developed to make the model interactive.
+A **Streamlit-based web interface** was developed to make the model easy to use.
 
-Features:
+### Features
 
 - Upload CT scan image
 - Model predicts cancer type
 - Displays prediction confidence
 - Visualization of prediction probabilities
 
-Example workflow:
+### Example Workflow
 
 1. Upload CT scan image
 2. Model processes the image
@@ -103,23 +106,23 @@ Example workflow:
 
 ## Project Structure
 
-
+```
 lung-cancer-cnn/
 │
 ├── notebooks/
-│ └── lung_cancer_training.ipynb
+│   └── lung_cancer_training.ipynb
 │
 ├── models/
-│ └── lung_cancer_cnn.h5
+│   └── lung_cancer_cnn.h5
 │
 ├── data/
-│ └── Lung Cancer Detection Dataset
+│   └── Lung Cancer Detection Dataset
 │
 ├── app.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 
 ---
 
@@ -130,42 +133,54 @@ Clone the repository:
 ```bash
 git clone https://github.com/Raghavj1401/lung-cancer-cnn.git
 cd lung-cancer-cnn
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
-Run the Streamlit App
+```
+
+---
+
+## Run the Streamlit Application
+
+```bash
 streamlit run app.py
+```
 
-Then open the provided local URL in your browser.
+Then open the provided **local URL** in your browser.
 
-Technologies Used
+---
 
-Python
+## Technologies Used
 
-TensorFlow / Keras
+- Python
+- TensorFlow / Keras
+- NumPy
+- Matplotlib
+- Streamlit
 
-NumPy
+---
 
-Matplotlib
+## Future Improvements
 
-Streamlit
+- Use a larger dataset
+- Apply transfer learning (ResNet / EfficientNet)
+- Improve model generalization
+- Deploy the application online
 
-Future Improvements
+---
 
-Use a larger dataset
+## Author
 
-Apply transfer learning (ResNet / EfficientNet)
+**Raghav Joshi**  
+B.Tech Electrical Engineering  
 
-Improve model generalization
+Email: raghavjoshi200314@gmail.com  
 
-Deploy the application online
+---
 
-Author
+## License
 
-Raghav
-B.Tech Electrical Engineering
-
-License
-
-This project is for educational and research purposes.
+This project is developed for **educational and research purposes**.
